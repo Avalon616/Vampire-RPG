@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 452962430}
   - component: {fileID: 452962429}
   - component: {fileID: 452962435}
+  - component: {fileID: 452962440}
   - component: {fileID: 452962439}
   m_Layer: 0
   m_Name: Flowchart - Dialog Example
@@ -481,7 +482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: Ok, let me start at the beginning of this night...
+  storyText: '{i}Fuck. Alright, let me start at the beginning of this night ... {/i}'
   description: 
   character: {fileID: 1836814228}
   portrait: {fileID: 0}
@@ -511,7 +512,7 @@ MonoBehaviour:
   storyText: YOU CAN'T BE DEAD, ANSWER ME.
   description: 
   character: {fileID: 805807530}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 58db9d1c9fcfbb342b8a00657099d071, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -535,10 +536,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: Pff, don't become like one of those monsters, use this power to fight.
+  storyText: Pff, don't become like one of these monsters.
   description: 
   character: {fileID: 2025466830}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 1ad3ec021ace8ac448267e194a47a181, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -562,10 +563,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: This is uncomfortable, why are we all even here?
+  storyText: This is uncomfortable. Why are we all even here?
   description: 
   character: {fileID: 867735218}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: e097a57c2906a9349a7569e54e67654e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -592,7 +593,7 @@ MonoBehaviour:
   storyText: I mean, I say choose me.
   description: 
   character: {fileID: 1886475395}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 3f79ef6c3006b6f44be6d287f9b63d4a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -616,7 +617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: So what am I to do?
+  storyText: So I have to choose now. Who do I choose?
   description: 
   character: {fileID: 1836814228}
   portrait: {fileID: 0}
@@ -671,12 +672,13 @@ MonoBehaviour:
   eventHandler: {fileID: 452962435}
   commandList:
   - {fileID: 452962434}
-  - {fileID: 452962439}
   - {fileID: 452962433}
   - {fileID: 452962432}
   - {fileID: 452962431}
   - {fileID: 452962430}
   - {fileID: 452962429}
+  - {fileID: 452962440}
+  - {fileID: 452962439}
   suppressAllAutoSelections: 0
 --- !u!114 &452962437
 MonoBehaviour:
@@ -704,7 +706,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 452962436}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 452962439}
   variables: []
   description: 
   stepPause: 0
@@ -732,34 +735,42 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &452962439
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452962428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
+--- !u!114 &452962440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452962428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43743931d28f43f89eced820d907351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  display: 1
-  stage: {fileID: 0}
-  character: {fileID: 1886475395}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 0}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
+  messageTarget: 1
+  _message:
+    stringRef: {fileID: 0}
+    stringVal: Scene 1
+  messageOLD: 
 --- !u!1 &484873564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,7 +1277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1471810400
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1394,7 +1405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 449261001}
+  selectedFlowchart: {fileID: 452962437}
 --- !u!4 &1814353382
 Transform:
   m_ObjectHideFlags: 1

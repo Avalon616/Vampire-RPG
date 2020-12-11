@@ -46,7 +46,8 @@ MonoBehaviour:
   nameText: Text From Devi
   nameColor: {r: 0.071969375, g: 0.6037736, b: 0, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: 21300000, guid: 58db9d1c9fcfbb342b8a00657099d071, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
